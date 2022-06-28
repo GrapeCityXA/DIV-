@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Viewer Lite Demo</title>
+
+    <!- viewerLite css file ->
+    <link rel="stylesheet" href="http://IP:51980/api/PluginAssets/dashboards-5.1.23422.0/dashboard.viewerLite.css" />
+    <link rel="stylesheet" href="http://IP:51980/api/PluginAssets/dashboards-5.1.23422.0/dashboard.viewerLite.vendor.css" />
+
+
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #viewerlite-container,
+    #dashboard-container {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+    }
+
+</style>
+<body>
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="form-control" placeholder="地区" id="diqu">
+                </div>
+                <div class="col-5">
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary" id="btn_cx">查询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="viewerlite-container">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br>
+                <select class="form-select" id="sel_cd" onchange="onset()" style="position: absolute;top: 30px;left: 600px;z-index: 1000;width: 100px;">
+                    <option value="华东">华东</option>
+                    <option value="华北">华北</option>
+                    <option value="西北">西北</option>
+                    <option value="西南">西南</option>
+                    <option value="东北">东北</option>
+                    <option value="华南">华南</option>
+                </select>
+            <div class="card" style="height: 350px;" id="dashboard-1">
+            </div>
+        </div>
+        <div class="col">
+            <br>
+            <div class="card" style="height: 350px;" id="dashboard-2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <br>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="a_hd">华东</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="a_hb">华北</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="a_xb">西北</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="a_db">东北</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="a_hn">华南</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="a_xn">西南</a>
+                </li>
+            </ul>
+            <div class="card" style="height: 350px;" id="dashboard-3">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!- viewerLite js file ->
+<script src="http://IP:51980/lib/polyfills.js?ver=5.1.23422.0"></script>
+<script src="http://IP:51980/api/PluginAssets/dashboards-5.1.23422.0/dashboard.viewerLite.js"></script>
+<script src="http://IP:51980/api/PluginAssets/dashboards-5.1.23422.0/dashboard.viewerLite.sheet.js"></script>
+<script src="http://IP:51980/api/PluginAssets/dashboards-5.1.23422.0/dashboard.viewerLite.chart.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
